@@ -6,6 +6,10 @@ let people = [];
 async function checkTask() {
     const data = await fetchPeople();
     people = data.map(item => new Person(item.name, item.height, item.mass, item.gender));
+    const cardsFromFilter = getFemaleCardsFilter(people);
+    console.log(cardsFromFilter);
+    const cardsFromLoop = getFemaleCardsLoop(people);
+    console.log(cardsFromLoop);
 }
 
 function getFemaleCardsFilter(personsArray) {
