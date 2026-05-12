@@ -1,4 +1,4 @@
-async function fetchPeople() {
+export async function fetchPeople() {
   const url = "https://swapi.info/api/people";
   try {
     const response = await fetch(url);
@@ -7,7 +7,7 @@ async function fetchPeople() {
     }
 
     const result = await response.json();
-    console.log(result);
+    return result;
   } catch (error) {
     console.error(error.message);
   }
