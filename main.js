@@ -1,5 +1,6 @@
 import { fetchPeople } from './api.js';
-import { Person } from './person.js';
+import pkg from './person.js';
+const { Person } = pkg;
 
 let people = [];
 
