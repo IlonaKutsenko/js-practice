@@ -1,4 +1,11 @@
- const user = {
+ interface User {
+    name: string;
+    age: number;
+    email: string;
+    getGreeting(): string; 
+}
+ 
+ const user: User = {
   name: "Daniel",
   age: 26,
   email: '123@gmail.com',
@@ -7,7 +14,7 @@
   }
 };
 
-function processUser(userObject: {name: string, age: number, email: string, getGreeting: any}) {
+function processUser(userObject:User) {
   // Bug 1: Typo in a standard method name.
   const announcement = "Processing user data...";
   console.log(announcement.toLocaleLowerCase());
